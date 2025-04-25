@@ -1,0 +1,6 @@
+framework:
+  validation:
+    enable_annotations: true   # For older annotation mappings, in PHP 8 attributes this is not needed
+    enable_attribute_mapping: true
+    mapping:
+      paths: ['%kernel.project_dir%/src/Entity']

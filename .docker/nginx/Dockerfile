@@ -1,0 +1,6 @@
+FROM nginx:1.27.3-alpine
+
+WORKDIR /app
+
+EXPOSE 80
+EXPOSE 443
