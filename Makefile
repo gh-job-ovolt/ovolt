@@ -1,3 +1,9 @@
+up:
+	docker compose up -d
+
+down:
+	docker compose down
+
 composer-install:
 	docker run --rm --interactive --user 1000:1000 --tty --volume ${PWD}:/app composer install
 
@@ -13,4 +19,4 @@ clear:
 run-unit-tests:
 	docker compose exec php vendor/phpunit/phpunit/phpunit
 
-init: composer-install dev-db-create dev-db-schema-update clear run-unit-tests
+init: up composer-install dev-db-create dev-db-schema-update clear run-unit-tests
